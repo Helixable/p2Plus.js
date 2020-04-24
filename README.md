@@ -1,8 +1,5 @@
 ---
 
-
----
-
 <h1 id="p2plus.js">p2Plus.js</h1>
 <p>A small addon for p2.js with some useful functions for quick prototyping.</p>
 <h3 id="features">Features</h3>
