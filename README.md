@@ -1,5 +1,8 @@
 ---
 
+
+---
+
 <h1 id="p2plus.js">p2Plus.js</h1>
 <p>A small addon for p2.js with some useful functions for quick prototyping.</p>
 <h3 id="features">Features</h3>
@@ -18,59 +21,59 @@
 <p>Simply refer the script <em><strong>after</strong></em> you refer to p2.js.</p>
 <h2 id="docs">Docs</h2>
 <h4 id="initialization">Initialization</h4>
-<pre><code>var p2P =  new p2Plus({
-	canvas: document.getElementById('canv'), //Canvas to render
-	scale:  20, //Rendering scale
-	world: world, //p2 World
-	p2: p2 //Optional p2 object
-});
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">var</span> p2P <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">p2Plus</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	canvas<span class="token punctuation">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'canv'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">//Canvas to render</span>
+	scale<span class="token punctuation">:</span>  <span class="token number">20</span><span class="token punctuation">,</span> <span class="token comment">//Rendering scale</span>
+	world<span class="token punctuation">:</span> world<span class="token punctuation">,</span> <span class="token comment">//p2 World</span>
+	p2<span class="token punctuation">:</span> p2 <span class="token comment">//Optional p2 object</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="key-detection">Key Detection</h4>
-<pre><code>if (p2P.keyState('w')){
-	console.log('W key pressed');
-};
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>p2P<span class="token punctuation">.</span><span class="token function">keyState</span><span class="token punctuation">(</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'W key pressed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="camera-manipulation">Camera Manipulation</h4>
-<pre><code>if(p2P.keyState('w')){
-	p2P.CAM.Y  +=  1;
-};
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">if</span><span class="token punctuation">(</span>p2P<span class="token punctuation">.</span><span class="token function">keyState</span><span class="token punctuation">(</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	p2P<span class="token punctuation">.</span>CAM<span class="token punctuation">.</span>Y  <span class="token operator">+=</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-if(p2P.keyState('s')){
-	p2P.CAM.Y  -=  1;
-};
+<span class="token keyword">if</span><span class="token punctuation">(</span>p2P<span class="token punctuation">.</span><span class="token function">keyState</span><span class="token punctuation">(</span><span class="token string">'s'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	p2P<span class="token punctuation">.</span>CAM<span class="token punctuation">.</span>Y  <span class="token operator">-=</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-if(p2P.keyState('a')){
-	p2P.CAM.X  +=  1;
-};
+<span class="token keyword">if</span><span class="token punctuation">(</span>p2P<span class="token punctuation">.</span><span class="token function">keyState</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	p2P<span class="token punctuation">.</span>CAM<span class="token punctuation">.</span>X  <span class="token operator">+=</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-if(p2P.keyState('d')){
-	p2P.CAM.X  -=  1;
-};
+<span class="token keyword">if</span><span class="token punctuation">(</span>p2P<span class="token punctuation">.</span><span class="token function">keyState</span><span class="token punctuation">(</span><span class="token string">'d'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	p2P<span class="token punctuation">.</span>CAM<span class="token punctuation">.</span>X  <span class="token operator">-=</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-var box =  new p2.Body({
-	position:  [3,  2],
-	mass:  1,
-	angularVelocity:  -0.2
-});
+<span class="token keyword">var</span> box <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">p2<span class="token punctuation">.</span>Body</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	position<span class="token punctuation">:</span>  <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+	mass<span class="token punctuation">:</span>  <span class="token number">1</span><span class="token punctuation">,</span>
+	angularVelocity<span class="token punctuation">:</span>  <span class="token operator">-</span><span class="token number">0.2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-box.addShape(new p2.Box({
-	width:  1,
-	height:  1
-}),  [0,  0.5]);
+box<span class="token punctuation">.</span><span class="token function">addShape</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">p2<span class="token punctuation">.</span>Box</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	width<span class="token punctuation">:</span>  <span class="token number">1</span><span class="token punctuation">,</span>
+	height<span class="token punctuation">:</span>  <span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span>  <span class="token number">0.5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-world.addBody(box);
+world<span class="token punctuation">.</span><span class="token function">addBody</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-//Focus camera on point
-p2P.CAM.center(box.position[0], box.position[1]);
+<span class="token comment">//Focus camera on point</span>
+p2P<span class="token punctuation">.</span>CAM<span class="token punctuation">.</span><span class="token function">center</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>position<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> box<span class="token punctuation">.</span>position<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="d-wireframe-rendering">2D Wireframe Rendering</h4>
-<pre><code>function draw(){
-	ctx.clearRect(0,0,1000,1000); //Clear canvas
-	world.step(1  /  60); //Tick p2.js world
-	p2P.render() //Render wireframe with p2Plus.js
-}
-window.requestAnimationFrame(draw)
-draw()
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">function</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	ctx<span class="token punctuation">.</span><span class="token function">clearRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Clear canvas</span>
+	world<span class="token punctuation">.</span><span class="token function">step</span><span class="token punctuation">(</span><span class="token number">1</span>  <span class="token operator">/</span>  <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Tick p2.js world</span>
+	p2P<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//Render wireframe with p2Plus.js</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span><span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>draw<span class="token punctuation">)</span>
+<span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <h2 id="license">License</h2>
 <p>MIT</p>
