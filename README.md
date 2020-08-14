@@ -2,7 +2,7 @@
 
 
 <h1 id="p2plus.js">p2Plus.js</h1>
-<p>A small addon for p2.js with some useful functions for quick prototyping.</p>
+<p>A small rendering addon for p2.js with some useful functions for quick prototyping.</p>
 <h3 id="features">Features</h3>
 <ul>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="true" disabled=""> Camera system</li>
